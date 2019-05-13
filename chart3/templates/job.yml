@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "{{.Release.Name}}"
+spec:
+  template:
+    metadata:
+      name: "{{.Release.Name}}"
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: pre-install-job
+        image: "{{ .Values.image.image }}:{{ .Values.image.tag }}"
+        command: ["/bin/bash"]
+        args: ["-c", {{.Values.command | quote }}]
