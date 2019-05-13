@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+spec:
+  selector:
+    matchLabels:
+      run: {{ .Values.appName }}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: {{ .Values.appName }}
+    spec:
+      containers:
+        - name: {{ .Values.image.name }}
+          image:  "{{ .Values.image.image }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+      #Described in values.yaml regystry will be used to pull the image
+      imagePullSecrets:
+        - name: {{ .Values.scp.k8s.dc.imageCredentials.name }}

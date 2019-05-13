@@ -1,0 +1,16 @@
+appName: boo
+image:
+  name: whalesay
+  image: xdc-k8s.docker.repositories.sap.ondemand.com/whalesay
+  tag: latest
+  imagePullPolicy: Always
+#Following structure is used by delivery channel for SAP specific values
+scp: #sap cloud platfirm
+  k8s: 
+    dc: #k8s delivery channel
+      imageCredentials:
+            name: image-credentials
+            #no matter what regystry you use here it will be replaced with SAP cdn regystry
+            registry: https://xdc-k8s.docker.repositories.sap.ondemand.com/
+            username: scp_k8s_dc
+            password: s%3A%2;O
