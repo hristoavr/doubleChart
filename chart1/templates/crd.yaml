@@ -19,4 +19,4 @@ spec:
     kind: Website
     singular: website
     plural: websites
-    shortNames: ['ws']
+    shortNames: ['serw']
