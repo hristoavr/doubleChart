@@ -2,3 +2,4 @@ image:
  image: bitnami/kubectl
  tag: latest
 command: kubectl create namespace borkocd
+newval: valuenew
