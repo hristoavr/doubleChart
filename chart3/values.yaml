@@ -1,5 +1,5 @@
 image:
  image: bitnami/kubectl
  tag: latest
-command: kubectl create namespace borkocd
+command: kubectl create namespace shopata
 newval: valuenew
