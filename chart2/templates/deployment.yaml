@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   containers:
-  - image: busybox
+  - image: busybox_test18
     command:
       - sleep
       - "3600"
