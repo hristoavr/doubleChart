@@ -1,4 +1,5 @@
 image:
-  image: bitnami/kubectl
-  tag: latest
-command: kubectl apply -f https://raw.githubusercontent.com/hristoavr/doubleChart/master/chart1/templates/crd.yaml
+ image: bitnami/kubectl
+ tag: latest
+command: kubectl create namespace shopata
+newval: valuenew
