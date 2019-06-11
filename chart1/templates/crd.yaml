@@ -7,7 +7,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   #the name must be the plural form + api group
-  name: {{ .Values.schedule | indent 2 }}
+  name: {{ .Values.schedule | toJson | indent 2 }}
 spec:
   # Can be namespaced or cluster scope
   scope: Namespaced 
